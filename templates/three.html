@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="decription" content="オススメの本を紹介">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="floor">
+    <header class="header">
+        <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'menu' %}">MENU</a></li>
+                <li><a href="{% url 'create' %}">CREATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h2 class="floor-title">3F：社会</h2>
+    </div>
+
+    <div class="grid">
+    {% for item in object_list %}
+        {% if item.category == 'three' %}
+        <ul>
+            <p><img src="{{ item.images.url }}"></p>
+            <li class="grid-title">{{ item.title }}</li>
+            <li class="grid-author">{{ item.author }}</li>
+            <li>{{ item.content }}</li>
+        </ul>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <div class="grid-floor">
+        <a href="{% url 'ten' %}">10F：思想</a>
+        <a href="{% url 'nine' %}">9F：生き方・働き方</a>
+        <a href="{% url 'eight' %}">8F：思考法</a>
+        <a href="{% url 'seven' %}">7F：クリエイティブ</a>
+        <a href="{% url 'six' %}">6F：チーム・コミュニティ</a>
+        <a href="{% url 'five' %}">5F：テクノロジー</a>
+        <a href="{% url 'four' %}">4F：自然科学・数学</a>
+        <a href="{% url 'three' %}">3F：社会</a>
+        <a href="{% url 'two' %}">2F：物語風ビジネス書</a>
+        <a href="{% url 'one' %}">1F：小説</a>
+    </div>
+
+    <footer>
+        <div>
+            <p><small>&copy; 2021 not at the entrance</small></p>
+        </div>
+    </footer>
+
+</body>

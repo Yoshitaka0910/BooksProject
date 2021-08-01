@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="decription" content="オススメの本を紹介">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="about">
+    <header class="header">
+        <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'menu' %}">MENU</a></li>
+                <li><a href="{% url 'create' %}">CREATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-content wrapper">
+            <h2 class="about-title">『文字だけでなく、<br class="br-pc">文章も読める人になりたい。』</h2>
+            <p class="about-message">
+                対象と自分との関係性を描く行為。<br>
+                そこから生まれた思考で、<br class="br-pc">世界の見え方を変える行為。<br>
+                考えること、そのものを楽しむ行為。<br>
+                よく読み、よく考えること、<br class="br-pc">ときに迷い立ち止まること、そのものを楽しむ行為。
+            </p>
+            <p class="about-message">
+                本を読むことは、<br class="br-pc">書かれた文字の意味をそのまま捉えるだけではない。<br>
+                著者の思いを想像すること。<br class="br-pc">前後の文章の関連性を汲み取ること。<br>
+                ときには数十ページ前の文章が<br class="br-pc">大きな意味合いを持つこともある。
+            </p>
+            <p class="about-message">
+                本を読むかのように、毎日を過ごしてみる。<br>
+                出来事が、そのままの姿では現れなくなる。<br>
+                日常は、非日常であること。<br>
+                当たり前は、当たり前でないこと。<br>
+                文脈を読むかのように、感謝を読み取れる。
+            </p>
+            <p class="about-message">
+                謙虚。<br>
+                この世は、贈与で溢れているという事実。<br>
+                自分が与えられるものは、与えられてきたもの。<br>
+                本は、そのことを気づくきっかけを<br class="br-pc">与えてくれるものだと思う。
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p><small>&copy; 2021 not at the entrance</small></p>
+        </div>
+    </footer>
+    
+</body>

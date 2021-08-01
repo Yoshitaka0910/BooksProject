@@ -1,0 +1,582 @@
+@charset "UTF-8";
+
+/* 共通
+-----------------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3";
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.br-pc {
+    display: none;
+}
+
+
+
+/* header
+--------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 1% auto 0;
+}
+
+.header a img {
+    height: 70px;
+    padding-top: 10px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-shadow: 2px 2px 2px black
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+
+
+/* footer
+--------------------*/
+footer {
+    background: #432;
+    text-align: right;
+    padding: 18px 0;
+}
+footer p {
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 5%;
+}
+
+
+
+
+/* index
+-----------------------------------------------------------------------*/
+.index {
+    background: url(images/book.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+
+/* title
+--------------------*/
+.index-top {
+    text-align: center;
+    margin: 12% auto 18%;
+}
+
+.index-title {
+    font-size: 5rem;
+    font-family: 'Philosopher', serif;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 1%;
+}
+
+.index-top p {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+
+/* vision
+--------------------*/
+.index-message {
+    background-color: rgb(200, 200, 200);
+    padding: 5% 0 8%;
+}
+
+.message-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 6%;
+}
+
+.message-main {
+    margin-bottom: 8%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Philosopher', serif;
+}
+
+.message-sub {
+    margin: 4% auto;
+    font-size: 1.5rem;
+    font-family: 'Philosopher', serif;
+    max-width: 820px;
+}
+
+
+/* history
+--------------------*/
+.index-history {
+    margin: 12% 0 10%;
+}
+.history {
+    font-family: 'Philosopher', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    line-height: 2.2;
+    color: rgb(250, 245, 233);
+    text-shadow: 2px 2px 2px black;
+    margin: 6% auto 6%;
+    max-width: 1050PX;
+}
+
+.button {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    font-size: 1.25rem;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #0bd;
+}
+
+.button:hover {
+    background: #0090aa;
+}
+
+
+
+/* about
+-----------------------------------------------------------------------*/
+.about {
+    background: url(images/about.jpg) no-repeat fixed bottom;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+}
+
+
+/* content
+--------------------*/
+.about-content {
+    text-align: center;
+    margin: 15% auto 15%;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-family: 'Philosopher', serif;
+    color: #fff;
+    text-shadow: 3px 3px 3px black;
+    margin-bottom: 15%;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 3px 3px 3px black;
+}
+
+.about-message {
+    margin: 10% auto 10%;
+}
+
+
+
+/* menu
+-----------------------------------------------------------------------*/
+.menu {
+    background: url(images/library.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/* main
+--------------------*/
+.menu-main {
+    text-align: center;
+    margin: 14% auto 18%;
+}
+
+.menu-number {
+    font-size: 4rem;
+    max-width: 700px;
+    margin: 4% auto;
+}
+
+.menu-number a {
+    color: #fff;
+}
+
+.menu-button {
+    display: inline-block;
+    font-size: 3rem;
+    background-color: rgb(95, 95, 95);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 700px;
+}
+
+.menu-button:hover {
+    background: #0090aa;
+}
+
+
+
+/* floor
+-----------------------------------------------------------------------*/
+.floor {
+    background: url(images/library.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/* floor-title
+--------------------*/
+.floor-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 7px 7px 7px black;
+    text-align: center;
+    margin: 8% auto;
+}
+
+
+/* grid
+--------------------*/
+.grid {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 8% 3%;
+    row-gap: 80px;
+}
+
+.grid ul {
+    padding-left: 0%;
+}
+
+.grid li {
+    color: #fff;
+    background-color: rgb(63, 62, 62);
+    padding-left: 10px;
+    margin-bottom: 1.5%;
+}
+
+.grid-title {
+    text-align: center;
+}
+
+.grid-author {
+    text-align: center;
+}
+
+.grid-floor {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 1300px;
+    margin: 20% auto 5%;
+}
+
+.grid-floor a {
+    font-weight: bold;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-left: 10px;
+}
+
+.grid-floor a:hover {
+    background: #0090aa;
+}
+
+
+
+/* create
+-----------------------------------------------------------------------*/
+textarea {
+    font-size: 1.2rem;
+}
+
+select {
+    font-size: 1.2rem;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+.create {
+    background: url(images/create.jpg) no-repeat fixed top;
+    background-size: cover;
+}
+
+.create-form {
+    max-width: 650px;
+    margin: 12% auto;
+}
+
+.create-form p {
+    color: #fff;
+}
+
+.form-category, .form-title, .form-author, .form-content {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 5%;
+}
+
+.form-images {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 15%;    
+}
+
+.form-button {
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    padding: 14px 32px;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #0bd;
+}
+
+.form-button:hover {
+    background: #0090aa;
+}
+
+
+
+/* スマホ用
+-----------------------------------------------------------------------*/
+@media screen and (max-width: 600px) {
+    /* 共通
+    ----------------------------------------------------*/
+
+    .br-pc {
+        display: block;
+    }
+
+    .br-sp {
+        display: none;
+    }
+
+    /* header
+    ---------------------------*/
+    .header {
+        margin: 5% 3%;
+    }
+
+    .header img {
+        height: 30px;
+    }
+
+    .main-nav {
+        font-size: 1.0rem;
+    }
+
+    .main-nav li {
+        margin-left: 12px;
+    }
+    
+
+    /* footer
+    --------------------*/
+    footer {
+        padding: 10px 0;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+
+
+    /* index
+    ----------------------------------------------------*/
+    .index {
+        background: url(images/book.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    /* title
+    ---------------------------*/
+    .index-top {
+        margin: 30% auto 35%;
+    }
+
+    .index-top p {
+        font-size: 1.0rem;
+    }
+
+    .index-title {
+        font-size: 3.5rem;
+    }
+
+    /* vison
+    ---------------------------*/
+    .index-message {
+        padding: 15% 0 15%;
+    }
+
+    .message-title {
+        font-size: 1.8rem;
+        margin-bottom: 10%;
+    }
+
+    .message-main {
+        font-size: 1.0rem;
+    }
+
+    .message-sub {
+        display: none;
+    }
+
+    /* history
+    ---------------------------*/
+    .index-history {
+        margin: 15% 4%;
+    }
+
+    .history {
+        font-size: 1.0rem;
+        margin-bottom: 8%;
+    }
+
+    .button {
+        font-size: 1.0rem;
+        border-radius: 5px;
+        padding: 10px 16px;
+        margin-top: 20%;
+    }
+
+
+    /* about
+    ----------------------------------------------------*/
+    .about {
+        background: url(images/about.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .about-content {
+        margin: 20% auto;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 30%;
+    }
+
+
+    /* menu
+    ----------------------------------------------------*/
+    .menu-number {
+        font-size: 1.4rem;
+        width: 300px;
+        margin: 8% auto;
+    }
+
+    .menu-button {
+        display: inline-block;
+        font-size: 1.4rem;
+        width: 300px;
+        background-color: rgb(110, 110, 110);
+    }
+
+    /* floor
+    ----------------------------------------------------*/
+
+    .floor-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin: 25% auto;
+    }
+
+    /* grid
+    ---------------------------*/
+    .grid {
+        display: block;
+        align-items: center;
+        margin: 8% 4%;
+    }
+
+    .grid-title {
+        text-align: center;
+        margin-bottom: 20%;
+        font-size: 0.9rem;
+    }
+
+    .grid ul {
+        margin-bottom: 20%;
+    }
+
+    .grid-floor {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin: 50% auto 10%;
+        width: 355px;
+    }
+
+    .grid-floor a {
+        font-size: 0.7rem;
+        height: 25px;
+    }
+
+
+
+    /* create
+    ----------------------------------------------------*/
+    .create {
+        background: url(images/create.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    textarea {
+        max-width: 350px;
+    }
+
+    .create-form {
+        max-width: 360px;
+    }
+
+
+}

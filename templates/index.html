@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="decription" content="オススメの本を紹介">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="index">
+    <header class="header">
+        <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'menu' %}">MENU</a></li>
+                <li><a href="{% url 'create' %}">CREATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="index-top">
+            <h2 class="index-title">My Books...</h2>
+            <p>私のオススメの本です。</p>
+        </div>
+
+        <div class="index-message">
+            <h2 class="message-title">想像力。</h2>
+            <p class="message-main">
+                『もし現実が一つの物語だとして、<br class="br-pc">もしかして自分は正義の味方じゃなくって、<br class="br-pc">悪玉なんかじゃないかって考えて事ないか？』
+            </p>
+            <p class="message-sub">
+                自分が知り得る範囲の外側に、違う誰かの人生があるという事実。<br>
+                疑似的ではあるけれども、違う誰かの貴重な経験ができる。<br>
+                本のありがたみが、ここにある。
+            </p>
+            <p class="message-sub">
+                「私は正しい」と論証できる知性に、<br>
+                「自分は間違っているかもしれない」と考えられる知性も持ち合わせたい。
+            </p>
+        </div>
+
+        <div class="index-history">
+            <h2 class="history">
+                きっかけは社会人。<br>
+                それまで好きな事（サッカー）だけしてきた人生で、<br class="br-sp">
+                自分とは違う目線を知りたくて手に取った１冊の本。<br>
+            </h2>
+            <h2 class="history">
+                読み始めるとあれこれ気になり、数珠のようにつながっていくことで、<br class="br-sp">
+                気づけば幅広い分野の本を読んでいました。<br>
+                ジャンルは違えど本質は共通していたり、<br class="br-sp">
+                現実は複雑で、あらゆる視点が必要だったり、<br class="br-sp">
+                その中で自分自身はどう思うか？と考えたり。<br>
+            </h2>
+            <h2 class="history">
+                そんな楽しみを与えてくれた本の数々を、自分なりにまとめました。<br>
+                参考になれば幸いです。
+            </h2>
+            <a class="button" href="{% url 'menu' %}">メニューを見る</a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p><small>&copy; 2021 not at the entrance</small></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

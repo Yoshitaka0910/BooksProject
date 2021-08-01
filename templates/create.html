@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="decription" content="オススメの本を紹介">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body class="create">
+    <header class="header">
+        <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'menu' %}">MENU</a></li>
+                <li><a href="{% url 'create' %}">CREATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <form class="create-form" action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <p class="form-category">カテゴリー　{{form.category}}</p>
+            <p class="form-title">タイトル　　{{form.title}}</p>
+            <p class="form-author">著者　　　　{{form.author}}</p>
+            <p class="form-content">内容　　　　{{form.content}}</p>
+            <p class="form-images">画像　　　　{{form.images}}</p>
+            <input class="form-button" type="submit" value="作成する">
+        </form>
+    </div>
+
+    <footer>
+        <div>
+            <p><small>&copy; 2021 not at the entrance</small></p>
+        </div>
+    </footer>
+    
+</body>
